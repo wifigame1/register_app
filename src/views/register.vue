@@ -89,8 +89,8 @@ export default {
 
         axios.post("http://localhost:3000/api/register", {
             "firstname": this.name,
-            "lastname": this.lastname,
-            "c_email": this.email
+            "lastname": this.lastname
+            
           }).then((res) => {
             console.log(res)
           });
