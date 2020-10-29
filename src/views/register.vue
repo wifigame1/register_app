@@ -32,21 +32,11 @@
         ></v-col>
       </v-row>
 
-      
-
+    
       <v-btn :disabled="!valid" color="success" class="mr-4" @click="validate">
         สมัครสมาชิก
       </v-btn>
 
-      
-      
-
-      <!-- <v-btn
-      color="warning"
-      @click="resetValidation"
-    >
-      เคลียร์การตรวจสอบ
-    </v-btn> -->
     </v-form>
   </v-container>
 </template>
@@ -61,15 +51,12 @@ export default {
     name: "",
     nameRules: [
       v => !!v || "กรุณากรอกชื่อ",
-      
     ],
 
     lastname: "",
     lastnameRules: [
       v => !!v || "กรุณากรอกนามสกุล",
-      
     ],
-
 
     search: "",
     headers: [
@@ -90,7 +77,6 @@ export default {
         axios.post("http://localhost:3000/api/register", {
             "firstname": this.name,
             "lastname": this.lastname
-            
           }).then((res) => {
             console.log(res)
           });
